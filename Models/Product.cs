@@ -1,0 +1,14 @@
+﻿namespace Mini_E_Commerce_API.Models
+{
+    public class Product
+    {
+        public int ProductId { get; set; }
+        public string Name { get; set; }
+        public string SKU { get; set; }
+        public decimal Price { get; set; }
+        public int StockQuantity { get; set; }
+        public string DisplayName { get; set; }
+        public bool IsActive { get; set; }
+        public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+    }
+}
